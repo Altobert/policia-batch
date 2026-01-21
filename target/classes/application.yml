@@ -1,0 +1,69 @@
+# Configuración de Spring Boot
+spring:
+  application:
+    name: policia-batch
+  
+  # Configuración de Oracle Database
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@queilen.sii.cl:1525:orcl
+    username: tl
+    password: tldesa321
+  
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+  
+  # Configuración de Spring Batch
+  batch:
+    job:
+      enabled: true # Ejecutar jobs automáticamente al inicio
+    initialize-schema: always
+  
+  # Configuración JMS
+  jms:
+    listener:
+      auto-startup: true
+
+# Deshabilitar puerto del servidor (aplicación batch)
+server:
+  port: -1
+
+# Habilitar ejecución de batch
+batchejecutable: true
+
+# Configuración de IBM MQ
+mq:
+  host: mqadesa.sii.cl
+  port: 3434
+  channel: APP.CH
+  queueManager: MQADESA
+  queue:
+    rta: NOTIFICA.EOL.RTA
+    mas: NOTIFICA.EOL.MAS
+
+# Configuración de logging
+logging:
+  level:
+    com.policia.batch: DEBUG
+    org.springframework.batch: INFO
+    org.springframework.jms: DEBUG
+    com.ibm.mq: INFO
+    oracle.jdbc: WARN
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level [%logger{36}] - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level [%logger{36}] - %msg%n"
+  file:
+    name: logs/policia-batch.log
+
+# Configuración de management endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always

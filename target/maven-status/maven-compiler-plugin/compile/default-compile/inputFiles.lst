@@ -1,0 +1,12 @@
+D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\src\main\java\com\policia\batch\config\CustomSkipPolicy.java
+D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\src\main\java\com\policia\batch\config\JmsConfiguration.java
+D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\src\main\java\com\policia\batch\service\XmlValidationService.java
+D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\src\main\java\com\policia\batch\exception\MalformedXmlException.java
+D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\src\main\java\com\policia\batch\config\BatchConfiguration.java
+D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\src\main\java\com\policia\batch\model\PoliciaData.java
+D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\src\main\java\com\policia\batch\PoliciaXmlBatchApplication.java
+D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\src\main\java\com\policia\batch\processor\PoliciaDataProcessor.java
+D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\src\main\java\com\policia\batch\reader\IBMMQItemReader.java
+D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\src\main\java\com\policia\batch\exception\InvalidDataException.java
+D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\src\main\java\com\policia\batch\listener\BatchErrorListener.java
+D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\src\main\java\com\policia\batch\writer\PoliciaDataWriter.java

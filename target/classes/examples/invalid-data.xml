@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policia-data>
+    <id>INVALID_ID_FORMAT</id>
+    <nombre></nombre>
+    <rango>RANGO_INEXISTENTE</rango>
+    <unidad>Unidad Central</unidad>
+    <estado>ACTIVO</estado>
+</policia-data>

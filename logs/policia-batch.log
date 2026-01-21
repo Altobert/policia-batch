@@ -1,0 +1,700 @@
+2026-01-21 09:58:08 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - Starting PoliciaXmlBatchApplication v1.0.0 using Java 17.0.12 on 138519856ASC-WS with PID 121144 (D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\target\policia-batch-1.0.0.jar started by alberto.sanmartin in D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch)
+2026-01-21 09:58:08 [main] DEBUG [c.p.batch.PoliciaXmlBatchApplication] - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-01-21 09:58:08 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - No active profile set, falling back to 1 default profile: "default"
+2026-01-21 09:58:08 [main] INFO  [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21 09:58:08 [main] INFO  [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2026-01-21 09:58:09 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2026-01-21 09:58:09 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2026-01-21 09:58:09 [main] INFO  [o.h.jpa.internal.util.LogHelper] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21 09:58:09 [main] INFO  [org.hibernate.Version] - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-01-21 09:58:09 [main] INFO  [o.h.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-01-21 09:58:09 [main] INFO  [org.hibernate.dialect.Dialect] - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2026-01-21 09:58:11 [main] INFO  [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-01-21 09:58:11 [main] INFO  [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 09:58:11 [main] WARN  [o.s.c.a.AnnotationConfigApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'batchConfiguration' defined in URL [jar:file:/D:/alberto.sanmartin/Mis%20documentos/proyectos-batch/policia-batch/target/policia-batch-1.0.0.jar!/BOOT-INF/classes!/com/policia/batch/config/BatchConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 3; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'policiaDataProcessor' defined in URL [jar:file:/D:/alberto.sanmartin/Mis%20documentos/proyectos-batch/policia-batch/target/policia-batch-1.0.0.jar!/BOOT-INF/classes!/com/policia/batch/processor/PoliciaDataProcessor.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'xmlValidationService' defined in URL [jar:file:/D:/alberto.sanmartin/Mis%20documentos/proyectos-batch/policia-batch/target/policia-batch-1.0.0.jar!/BOOT-INF/classes!/com/policia/batch/service/XmlValidationService.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.policia.batch.service.XmlValidationService]: Constructor threw exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+2026-01-21 09:58:11 [main] INFO  [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 09:58:11 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2026-01-21 09:58:11 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2026-01-21 09:58:11 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-01-21 09:58:11 [main] ERROR [o.s.boot.SpringApplication] - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'batchConfiguration' defined in URL [jar:file:/D:/alberto.sanmartin/Mis%20documentos/proyectos-batch/policia-batch/target/policia-batch-1.0.0.jar!/BOOT-INF/classes!/com/policia/batch/config/BatchConfiguration.class]: Unsatisfied dependency expressed through constructor parameter 3; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'policiaDataProcessor' defined in URL [jar:file:/D:/alberto.sanmartin/Mis%20documentos/proyectos-batch/policia-batch/target/policia-batch-1.0.0.jar!/BOOT-INF/classes!/com/policia/batch/processor/PoliciaDataProcessor.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'xmlValidationService' defined in URL [jar:file:/D:/alberto.sanmartin/Mis%20documentos/proyectos-batch/policia-batch/target/policia-batch-1.0.0.jar!/BOOT-INF/classes!/com/policia/batch/service/XmlValidationService.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.policia.batch.service.XmlValidationService]: Constructor threw exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:929)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:591)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.policia.batch.PoliciaXmlBatchApplication.main(PoliciaXmlBatchApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'policiaDataProcessor' defined in URL [jar:file:/D:/alberto.sanmartin/Mis%20documentos/proyectos-batch/policia-batch/target/policia-batch-1.0.0.jar!/BOOT-INF/classes!/com/policia/batch/processor/PoliciaDataProcessor.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'xmlValidationService' defined in URL [jar:file:/D:/alberto.sanmartin/Mis%20documentos/proyectos-batch/policia-batch/target/policia-batch-1.0.0.jar!/BOOT-INF/classes!/com/policia/batch/service/XmlValidationService.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.policia.batch.service.XmlValidationService]: Constructor threw exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'xmlValidationService' defined in URL [jar:file:/D:/alberto.sanmartin/Mis%20documentos/proyectos-batch/policia-batch/target/policia-batch-1.0.0.jar!/BOOT-INF/classes!/com/policia/batch/service/XmlValidationService.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.policia.batch.service.XmlValidationService]: Constructor threw exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:310)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:291)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 40 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.policia.batch.service.XmlValidationService]: Constructor threw exception; nested exception is javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:226)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:306)
+	... 54 common frames omitted
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662)
+	at com.policia.batch.service.XmlValidationService.<init>(XmlValidationService.java:32)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:213)
+	... 56 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:592)
+	at org.springframework.boot.loader.LaunchedURLClassLoader.loadClass(LaunchedURLClassLoader.java:151)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122)
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276)
+	... 66 common frames omitted
+2026-01-21 09:59:00 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - Starting PoliciaXmlBatchApplication v1.0.0 using Java 17.0.12 on 138519856ASC-WS with PID 165552 (D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\target\policia-batch-1.0.0.jar started by alberto.sanmartin in D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch)
+2026-01-21 09:59:00 [main] DEBUG [c.p.batch.PoliciaXmlBatchApplication] - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-01-21 09:59:00 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - No active profile set, falling back to 1 default profile: "default"
+2026-01-21 09:59:00 [main] INFO  [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21 09:59:00 [main] INFO  [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2026-01-21 09:59:01 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2026-01-21 09:59:01 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2026-01-21 09:59:01 [main] INFO  [o.h.jpa.internal.util.LogHelper] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21 09:59:01 [main] INFO  [org.hibernate.Version] - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-01-21 09:59:01 [main] INFO  [o.h.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-01-21 09:59:01 [main] INFO  [org.hibernate.dialect.Dialect] - HHH000400: Using dialect: org.hibernate.dialect.Oracle12cDialect
+2026-01-21 09:59:03 [main] INFO  [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-01-21 09:59:03 [main] INFO  [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 09:59:03 [main] WARN  [o.s.b.a.batch.JpaBatchConfigurer] - JPA does not support custom isolation levels, so locks may not be taken when launching Jobs. To silence this warning, set 'spring.batch.jdbc.isolation-level-for-create' to 'default'.
+2026-01-21 09:59:03 [main] INFO  [o.s.b.c.r.s.JobRepositoryFactoryBean] - No database type set, using meta data indicating: ORACLE
+2026-01-21 09:59:03 [main] INFO  [o.s.b.c.l.support.SimpleJobLauncher] - No TaskExecutor has been set, defaulting to synchronous executor.
+2026-01-21 09:59:03 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - Started PoliciaXmlBatchApplication in 3.46 seconds (JVM running for 3.762)
+2026-01-21 09:59:03 [main] INFO  [o.s.b.a.b.JobLauncherApplicationRunner] - Running default command line with: []
+2026-01-21 09:59:03 [main] INFO  [o.s.b.a.l.ConditionEvaluationReportLoggingListener] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-01-21 09:59:03 [main] ERROR [o.s.boot.SpringApplication] - Application run failed
+java.lang.IllegalStateException: Failed to execute ApplicationRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$2(SpringApplication.java:746)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.policia.batch.PoliciaXmlBatchApplication.main(PoliciaXmlBatchApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [SELECT JOB_INSTANCE_ID, JOB_NAME from BATCH_JOB_INSTANCE where JOB_NAME = ? and JOB_KEY = ?]; nested exception is java.sql.SQLSyntaxErrorException: ORA-00942: la tabla o vista no existe
+
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:236)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1577)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:669)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:715)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:746)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:759)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:817)
+	at org.springframework.batch.core.repository.dao.JdbcJobInstanceDao.getJobInstance(JdbcJobInstanceDao.java:151)
+	at org.springframework.batch.core.repository.support.SimpleJobRepository.isJobInstanceExists(SimpleJobRepository.java:93)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at jdk.proxy2/jdk.proxy2.$Proxy71.isJobInstanceExists(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:128)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at jdk.proxy2/jdk.proxy2.$Proxy71.isJobInstanceExists(Unknown Source)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.getNextJobParameters(JobLauncherApplicationRunner.java:220)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:212)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:193)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:172)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:167)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:162)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:756)
+	... 22 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: ORA-00942: la tabla o vista no existe
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:630)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:564)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1151)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:771)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:299)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:498)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:152)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:937)
+	at oracle.jdbc.driver.OracleStatement.prepareDefineBufferAndExecute(OracleStatement.java:1172)
+	at oracle.jdbc.driver.OracleStatement.executeMaybeDescribe(OracleStatement.java:1101)
+	at oracle.jdbc.driver.OracleStatement.executeSQLSelect(OracleStatement.java:1426)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1309)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3746)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3855)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1098)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.springframework.jdbc.core.JdbcTemplate$1.doInPreparedStatement(JdbcTemplate.java:724)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:650)
+	... 59 common frames omitted
+Caused by: oracle.jdbc.OracleDatabaseException: ORA-00942: la tabla o vista no existe
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:637)
+	... 77 common frames omitted
+2026-01-21 09:59:03 [main] INFO  [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 09:59:03 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2026-01-21 09:59:03 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2026-01-21 10:02:37 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - Starting PoliciaXmlBatchApplication v1.0.0 using Java 17.0.12 on 138519856ASC-WS with PID 135660 (D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\target\policia-batch-1.0.0.jar started by alberto.sanmartin in D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch)
+2026-01-21 10:02:37 [main] DEBUG [c.p.batch.PoliciaXmlBatchApplication] - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-01-21 10:02:37 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - No active profile set, falling back to 1 default profile: "default"
+2026-01-21 10:02:37 [main] INFO  [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21 10:02:37 [main] INFO  [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2026-01-21 10:02:37 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2026-01-21 10:02:37 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2026-01-21 10:02:37 [main] INFO  [o.h.jpa.internal.util.LogHelper] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21 10:02:38 [main] INFO  [org.hibernate.Version] - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-01-21 10:02:38 [main] INFO  [o.h.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-01-21 10:02:38 [main] INFO  [org.hibernate.dialect.Dialect] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2026-01-21 10:02:38 [main] INFO  [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-01-21 10:02:38 [main] INFO  [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 10:02:38 [main] WARN  [o.s.b.a.batch.JpaBatchConfigurer] - JPA does not support custom isolation levels, so locks may not be taken when launching Jobs. To silence this warning, set 'spring.batch.jdbc.isolation-level-for-create' to 'default'.
+2026-01-21 10:02:38 [main] INFO  [o.s.b.c.r.s.JobRepositoryFactoryBean] - No database type set, using meta data indicating: H2
+2026-01-21 10:02:39 [main] INFO  [o.s.b.c.l.support.SimpleJobLauncher] - No TaskExecutor has been set, defaulting to synchronous executor.
+2026-01-21 10:02:39 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - Started PoliciaXmlBatchApplication in 2.368 seconds (JVM running for 2.648)
+2026-01-21 10:02:39 [main] INFO  [o.s.b.a.b.JobLauncherApplicationRunner] - Running default command line with: []
+2026-01-21 10:02:39 [main] INFO  [o.s.b.c.l.support.SimpleJobLauncher] - Job: [SimpleJob: [name=policiaXmlProcessingJob]] launched with the following parameters: [{}]
+2026-01-21 10:02:39 [main] INFO  [c.p.b.listener.BatchErrorListener] - === INICIANDO BATCH POLICIA-XML ===
+2026-01-21 10:02:39 [main] INFO  [c.p.b.listener.BatchErrorListener] - Job ID: 1
+2026-01-21 10:02:39 [main] INFO  [c.p.b.listener.BatchErrorListener] - Parámetros: {}
+2026-01-21 10:02:39 [main] INFO  [o.s.batch.core.job.SimpleStepHandler] - Executing step: [processXmlStep]
+2026-01-21 10:02:39 [main] INFO  [c.p.b.listener.BatchErrorListener] - --- Iniciando Step: processXmlStep ---
+2026-01-21 10:02:39 [main] INFO  [c.p.batch.reader.IBMMQItemReader] - Intentando leer mensaje de cola: NOTIFICA.EOL.RTA
+2026-01-21 10:02:39 [main] DEBUG [o.s.jms.core.JmsTemplate] - Executing callback on JMS Session: {"ConnectionId":"414D51434D51414445534120202020207C9B4A6900ED176B","ObjectId":"com.ibm.msg.client.wmq.internal.WMQSession@6345e7b9","Channel":"APP.CH","Port":"3434","ConnectionMode":"WMQ_CM_CLIENT","Host":"mqadesa.sii.cl/10.20.130.183","ResolvedQueueManager":"MQADESA","QueueManager":"MQADESA"}
+2026-01-21 10:02:39 [main] INFO  [c.p.batch.reader.IBMMQItemReader] - Cambiando a cola: NOTIFICA.EOL.MAS
+2026-01-21 10:02:39 [main] DEBUG [o.s.jms.core.JmsTemplate] - Executing callback on JMS Session: {"ConnectionId":"414D51434D51414445534120202020207C9B4A6900ED176B","ObjectId":"com.ibm.msg.client.wmq.internal.WMQSession@6345e7b9","Channel":"APP.CH","Port":"3434","ConnectionMode":"WMQ_CM_CLIENT","Host":"mqadesa.sii.cl/10.20.130.183","ResolvedQueueManager":"MQADESA","QueueManager":"MQADESA"}
+2026-01-21 10:02:44 [main] INFO  [c.p.batch.reader.IBMMQItemReader] - No hay más mensajes en ninguna cola
+2026-01-21 10:02:44 [main] INFO  [c.p.b.listener.BatchErrorListener] - --- Step Completado: processXmlStep ---
+2026-01-21 10:02:44 [main] INFO  [c.p.b.listener.BatchErrorListener] - Items leídos: 0, Procesados: 0, Escritos: 0
+2026-01-21 10:02:44 [main] INFO  [o.s.batch.core.step.AbstractStep] - Step: [processXmlStep] executed in 5s276ms
+2026-01-21 10:02:44 [main] INFO  [c.p.b.listener.BatchErrorListener] - === FINALIZANDO BATCH POLICIA-XML ===
+2026-01-21 10:02:44 [main] INFO  [c.p.b.listener.BatchErrorListener] - Status: COMPLETED
+2026-01-21 10:02:44 [main] INFO  [c.p.b.listener.BatchErrorListener] - Tiempo de ejecución: 5293ms
+2026-01-21 10:02:44 [main] INFO  [c.p.b.listener.BatchErrorListener] - JOB COMPLETADO EXITOSAMENTE
+2026-01-21 10:02:44 [main] INFO  [o.s.b.c.l.support.SimpleJobLauncher] - Job: [SimpleJob: [name=policiaXmlProcessingJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 5s293ms
+2026-01-21 10:02:44 [main] INFO  [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 10:02:44 [main] INFO  [o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2026-01-21 10:02:44 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2026-01-21 10:02:44 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2026-01-21 17:09:51 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - Starting PoliciaXmlBatchApplication v1.0.0 using Java 17.0.12 on 138519856ASC-WS with PID 148952 (D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\target\policia-batch-1.0.0.jar started by alberto.sanmartin in D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch)
+2026-01-21 17:09:51 [main] DEBUG [c.p.batch.PoliciaXmlBatchApplication] - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-01-21 17:09:51 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - No active profile set, falling back to 1 default profile: "default"
+2026-01-21 17:09:51 [main] INFO  [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21 17:09:51 [main] INFO  [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2026-01-21 17:09:52 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2026-01-21 17:09:52 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2026-01-21 17:09:52 [main] INFO  [o.h.jpa.internal.util.LogHelper] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21 17:09:52 [main] INFO  [org.hibernate.Version] - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-01-21 17:09:52 [main] INFO  [o.h.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-01-21 17:09:52 [main] INFO  [org.hibernate.dialect.Dialect] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2026-01-21 17:09:52 [main] INFO  [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-01-21 17:09:52 [main] INFO  [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 17:09:53 [main] WARN  [o.s.b.a.batch.JpaBatchConfigurer] - JPA does not support custom isolation levels, so locks may not be taken when launching Jobs. To silence this warning, set 'spring.batch.jdbc.isolation-level-for-create' to 'default'.
+2026-01-21 17:09:53 [main] INFO  [o.s.b.c.r.s.JobRepositoryFactoryBean] - No database type set, using meta data indicating: H2
+2026-01-21 17:09:53 [main] INFO  [o.s.b.c.l.support.SimpleJobLauncher] - No TaskExecutor has been set, defaulting to synchronous executor.
+2026-01-21 17:09:53 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - Started PoliciaXmlBatchApplication in 2.821 seconds (JVM running for 3.15)
+2026-01-21 17:09:53 [main] INFO  [o.s.b.a.b.JobLauncherApplicationRunner] - Running default command line with: []
+2026-01-21 17:09:54 [main] INFO  [o.s.b.c.l.support.SimpleJobLauncher] - Job: [SimpleJob: [name=policiaXmlProcessingJob]] launched with the following parameters: [{}]
+2026-01-21 17:09:54 [main] INFO  [c.p.b.listener.BatchErrorListener] - === INICIANDO BATCH POLICIA-XML ===
+2026-01-21 17:09:54 [main] INFO  [c.p.b.listener.BatchErrorListener] - Job ID: 1
+2026-01-21 17:09:54 [main] INFO  [c.p.b.listener.BatchErrorListener] - Parámetros: {}
+2026-01-21 17:09:54 [main] INFO  [o.s.batch.core.job.SimpleStepHandler] - Executing step: [processXmlStep]
+2026-01-21 17:09:54 [main] INFO  [c.p.b.listener.BatchErrorListener] - --- Iniciando Step: processXmlStep ---
+2026-01-21 17:09:54 [main] INFO  [c.p.batch.reader.IBMMQItemReader] - Intentando leer mensaje de cola: NOTIFICA.EOL.RTA
+2026-01-21 17:09:54 [main] DEBUG [o.s.jms.core.JmsTemplate] - Executing callback on JMS Session: {"ConnectionId":"414D51434D51414445534120202020207C9B4A6900AF776B","ObjectId":"com.ibm.msg.client.wmq.internal.WMQSession@5c0f79f0","Channel":"APP.CH","Port":"3434","ConnectionMode":"WMQ_CM_CLIENT","Host":"mqadesa.sii.cl/10.20.130.183","ResolvedQueueManager":"MQADESA","QueueManager":"MQADESA"}
+2026-01-21 17:09:59 [main] INFO  [c.p.batch.reader.IBMMQItemReader] - Cambiando a cola: NOTIFICA.EOL.MAS
+2026-01-21 17:09:59 [main] DEBUG [o.s.jms.core.JmsTemplate] - Executing callback on JMS Session: {"ConnectionId":"414D51434D51414445534120202020207C9B4A6900AF776B","ObjectId":"com.ibm.msg.client.wmq.internal.WMQSession@5c0f79f0","Channel":"APP.CH","Port":"3434","ConnectionMode":"WMQ_CM_CLIENT","Host":"mqadesa.sii.cl/10.20.130.183","ResolvedQueueManager":"MQADESA","QueueManager":"MQADESA"}
+2026-01-21 17:09:59 [main] INFO  [c.p.batch.reader.IBMMQItemReader] - Mensaje leído de cola NOTIFICA.EOL.MAS: Trx:<Message>
+ <MessageId>
+  <Code>RECMAS</Code>
+  <MsgDesc>Renta Masiva</MsgDesc>
+  <Version>0</Ver...
+2026-01-21 17:09:59 [main] ERROR [c.p.batch.reader.IBMMQItemReader] - XML mal formado detectado: Content is not allowed in prolog.
+2026-01-21 17:09:59 [main] ERROR [c.p.batch.reader.IBMMQItemReader] - DATOS INVÁLIDOS DETECTADOS - DETENIENDO BATCH: XML mal formado detectado: Content is not allowed in prolog.
+2026-01-21 17:09:59 [main] ERROR [c.p.batch.reader.IBMMQItemReader] - Error al leer mensaje de la cola: XML mal formado detectado: Content is not allowed in prolog.
+com.policia.batch.exception.MalformedXmlException: XML mal formado detectado: Content is not allowed in prolog.
+	at com.policia.batch.reader.IBMMQItemReader.handleInvalidData(IBMMQItemReader.java:160)
+	at com.policia.batch.reader.IBMMQItemReader.validateXmlFormat(IBMMQItemReader.java:150)
+	at com.policia.batch.reader.IBMMQItemReader.read(IBMMQItemReader.java:82)
+	at com.policia.batch.reader.IBMMQItemReader.read(IBMMQItemReader.java:22)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.doRead(SimpleChunkProvider.java:99)
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProvider.read(FaultTolerantChunkProvider.java:87)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider$1.doInIteration(SimpleChunkProvider.java:126)
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:382)
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215)
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.provide(SimpleChunkProvider.java:118)
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:71)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:407)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:331)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:273)
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82)
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:382)
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215)
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:258)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:208)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:152)
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:413)
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:136)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:320)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:149)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:128)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at jdk.proxy2/jdk.proxy2.$Proxy81.run(Unknown Source)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:213)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:193)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:172)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:167)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:162)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$2(SpringApplication.java:746)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.policia.batch.PoliciaXmlBatchApplication.main(PoliciaXmlBatchApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+2026-01-21 17:09:59 [main] ERROR [c.p.batch.config.CustomSkipPolicy] - ERROR CRÍTICO DETECTADO - NO SE PUEDE SALTAR: XML mal formado detectado: Content is not allowed in prolog.
+2026-01-21 17:09:59 [main] ERROR [c.p.batch.config.CustomSkipPolicy] - El batch debe detenerse debido a datos inválidos
+2026-01-21 17:09:59 [main] ERROR [o.s.batch.core.step.AbstractStep] - Encountered an error executing step processXmlStep in job policiaXmlProcessingJob
+org.springframework.batch.core.step.skip.NonSkippableReadException: Non-skippable exception during read
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProvider.read(FaultTolerantChunkProvider.java:105)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider$1.doInIteration(SimpleChunkProvider.java:126)
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:382)
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215)
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.provide(SimpleChunkProvider.java:118)
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:71)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:407)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:331)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:273)
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82)
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:382)
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215)
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:258)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:208)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:152)
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:413)
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:136)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:320)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:149)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:128)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at jdk.proxy2/jdk.proxy2.$Proxy81.run(Unknown Source)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:213)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:193)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:172)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:167)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:162)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$2(SpringApplication.java:746)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.policia.batch.PoliciaXmlBatchApplication.main(PoliciaXmlBatchApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: com.policia.batch.exception.MalformedXmlException: XML mal formado detectado: Content is not allowed in prolog.
+	at com.policia.batch.reader.IBMMQItemReader.handleInvalidData(IBMMQItemReader.java:160)
+	at com.policia.batch.reader.IBMMQItemReader.validateXmlFormat(IBMMQItemReader.java:150)
+	at com.policia.batch.reader.IBMMQItemReader.read(IBMMQItemReader.java:82)
+	at com.policia.batch.reader.IBMMQItemReader.read(IBMMQItemReader.java:22)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.doRead(SimpleChunkProvider.java:99)
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProvider.read(FaultTolerantChunkProvider.java:87)
+	... 62 common frames omitted
+2026-01-21 17:09:59 [main] INFO  [c.p.b.listener.BatchErrorListener] - --- Step Completado: processXmlStep ---
+2026-01-21 17:09:59 [main] INFO  [c.p.b.listener.BatchErrorListener] - Items leídos: 0, Procesados: 0, Escritos: 0
+2026-01-21 17:09:59 [main] ERROR [c.p.b.listener.BatchErrorListener] - STEP FALLIDO: org.springframework.batch.core.step.skip.NonSkippableReadException: Non-skippable exception during read
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProvider.read(FaultTolerantChunkProvider.java:105)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider$1.doInIteration(SimpleChunkProvider.java:126)
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:382)
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215)
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.provide(SimpleChunkProvider.java:118)
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:71)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:407)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:331)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:273)
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82)
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:382)
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215)
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:258)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:208)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:152)
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:413)
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:136)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:320)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:149)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:128)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at jdk.proxy2/jdk.proxy2.$Proxy81.run(Unknown Source)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:213)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:193)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:172)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:167)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:162)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$2(SpringApplication.java:746)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.policia.batch.PoliciaXmlBatchApplication.main(PoliciaXmlBatchApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: com.policia.batch.exception.MalformedXmlException: XML mal formado detectado: Content is not allowed in prolog.
+	at com.policia.batch.reader.IBMMQItemReader.handleInvalidData(IBMMQItemReader.java:160)
+	at com.policia.batch.reader.IBMMQItemReader.validateXmlFormat(IBMMQItemReader.java:150)
+	at com.policia.batch.reader.IBMMQItemReader.read(IBMMQItemReader.java:82)
+	at com.policia.batch.reader.IBMMQItemReader.read(IBMMQItemReader.java:22)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.doRead(SimpleChunkProvider.java:99)
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProvider.read(FaultTolerantChunkProvider.java:87)
+	... 62 more
+
+2026-01-21 17:09:59 [main] INFO  [o.s.batch.core.step.AbstractStep] - Step: [processXmlStep] executed in 5s307ms
+2026-01-21 17:09:59 [main] INFO  [c.p.b.listener.BatchErrorListener] - === FINALIZANDO BATCH POLICIA-XML ===
+2026-01-21 17:09:59 [main] INFO  [c.p.b.listener.BatchErrorListener] - Status: FAILED
+2026-01-21 17:09:59 [main] INFO  [c.p.b.listener.BatchErrorListener] - Tiempo de ejecución: 5315ms
+2026-01-21 17:09:59 [main] ERROR [c.p.b.listener.BatchErrorListener] - JOB FALLIDO - Estado: FAILED
+2026-01-21 17:09:59 [main] ERROR [c.p.b.listener.BatchErrorListener] - Error inesperado: Non-skippable exception during read
+org.springframework.batch.core.step.skip.NonSkippableReadException: Non-skippable exception during read
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProvider.read(FaultTolerantChunkProvider.java:105)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider$1.doInIteration(SimpleChunkProvider.java:126)
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:382)
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215)
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.provide(SimpleChunkProvider.java:118)
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:71)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:407)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:331)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:273)
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82)
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:382)
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215)
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145)
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:258)
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:208)
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:152)
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:413)
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:136)
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:320)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:149)
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50)
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:128)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at jdk.proxy2/jdk.proxy2.$Proxy81.run(Unknown Source)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:213)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:193)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:172)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:167)
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:162)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$2(SpringApplication.java:746)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.policia.batch.PoliciaXmlBatchApplication.main(PoliciaXmlBatchApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: com.policia.batch.exception.MalformedXmlException: XML mal formado detectado: Content is not allowed in prolog.
+	at com.policia.batch.reader.IBMMQItemReader.handleInvalidData(IBMMQItemReader.java:160)
+	at com.policia.batch.reader.IBMMQItemReader.validateXmlFormat(IBMMQItemReader.java:150)
+	at com.policia.batch.reader.IBMMQItemReader.read(IBMMQItemReader.java:82)
+	at com.policia.batch.reader.IBMMQItemReader.read(IBMMQItemReader.java:22)
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.doRead(SimpleChunkProvider.java:99)
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProvider.read(FaultTolerantChunkProvider.java:87)
+	... 62 common frames omitted
+2026-01-21 17:09:59 [main] INFO  [o.s.b.c.l.support.SimpleJobLauncher] - Job: [SimpleJob: [name=policiaXmlProcessingJob]] completed with the following parameters: [{}] and the following status: [FAILED] in 5s315ms
+2026-01-21 17:09:59 [main] INFO  [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 17:09:59 [main] INFO  [o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2026-01-21 17:09:59 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2026-01-21 17:09:59 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2026-01-21 17:17:58 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - Starting PoliciaXmlBatchApplication v1.0.0 using Java 17.0.12 on 138519856ASC-WS with PID 123660 (D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\target\policia-batch-1.0.0.jar started by alberto.sanmartin in D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch)
+2026-01-21 17:17:58 [main] DEBUG [c.p.batch.PoliciaXmlBatchApplication] - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-01-21 17:17:58 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - No active profile set, falling back to 1 default profile: "default"
+2026-01-21 17:17:59 [main] INFO  [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21 17:17:59 [main] INFO  [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2026-01-21 17:17:59 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2026-01-21 17:17:59 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2026-01-21 17:17:59 [main] INFO  [o.h.jpa.internal.util.LogHelper] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21 17:17:59 [main] INFO  [org.hibernate.Version] - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-01-21 17:17:59 [main] INFO  [o.h.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-01-21 17:17:59 [main] INFO  [org.hibernate.dialect.Dialect] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2026-01-21 17:18:00 [main] INFO  [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-01-21 17:18:00 [main] INFO  [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 17:18:00 [main] WARN  [o.s.b.a.batch.JpaBatchConfigurer] - JPA does not support custom isolation levels, so locks may not be taken when launching Jobs. To silence this warning, set 'spring.batch.jdbc.isolation-level-for-create' to 'default'.
+2026-01-21 17:18:00 [main] INFO  [o.s.b.c.r.s.JobRepositoryFactoryBean] - No database type set, using meta data indicating: H2
+2026-01-21 17:18:00 [main] INFO  [o.s.b.c.l.support.SimpleJobLauncher] - No TaskExecutor has been set, defaulting to synchronous executor.
+2026-01-21 17:18:00 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - Started PoliciaXmlBatchApplication in 2.352 seconds (JVM running for 2.661)
+2026-01-21 17:18:00 [main] INFO  [o.s.b.a.b.JobLauncherApplicationRunner] - Running default command line with: []
+2026-01-21 17:18:00 [main] INFO  [o.s.b.c.l.support.SimpleJobLauncher] - Job: [SimpleJob: [name=policiaXmlProcessingJob]] launched with the following parameters: [{}]
+2026-01-21 17:18:01 [main] INFO  [c.p.b.listener.BatchErrorListener] - === INICIANDO BATCH POLICIA-XML ===
+2026-01-21 17:18:01 [main] INFO  [c.p.b.listener.BatchErrorListener] - Job ID: 1
+2026-01-21 17:18:01 [main] INFO  [c.p.b.listener.BatchErrorListener] - Parámetros: {}
+2026-01-21 17:18:01 [main] INFO  [o.s.batch.core.job.SimpleStepHandler] - Executing step: [processXmlStep]
+2026-01-21 17:18:01 [main] INFO  [c.p.b.listener.BatchErrorListener] - --- Iniciando Step: processXmlStep ---
+2026-01-21 17:18:01 [main] INFO  [c.p.batch.reader.IBMMQItemReader] - Intentando leer mensaje de cola: NOTIFICA.EOL.RTA
+2026-01-21 17:18:01 [main] DEBUG [o.s.jms.core.JmsTemplate] - Executing callback on JMS Session: {"ConnectionId":"414D51434D51414445534120202020207C9B4A69007F796B","ObjectId":"com.ibm.msg.client.wmq.internal.WMQSession@15dd5ac2","Channel":"APP.CH","Port":"3434","ConnectionMode":"WMQ_CM_CLIENT","Host":"mqadesa.sii.cl/10.20.130.183","ResolvedQueueManager":"MQADESA","QueueManager":"MQADESA"}
+2026-01-21 17:18:06 [main] INFO  [c.p.batch.reader.IBMMQItemReader] - Cambiando a cola: NOTIFICA.EOL.MAS
+2026-01-21 17:18:06 [main] DEBUG [o.s.jms.core.JmsTemplate] - Executing callback on JMS Session: {"ConnectionId":"414D51434D51414445534120202020207C9B4A69007F796B","ObjectId":"com.ibm.msg.client.wmq.internal.WMQSession@15dd5ac2","Channel":"APP.CH","Port":"3434","ConnectionMode":"WMQ_CM_CLIENT","Host":"mqadesa.sii.cl/10.20.130.183","ResolvedQueueManager":"MQADESA","QueueManager":"MQADESA"}
+2026-01-21 17:18:11 [main] INFO  [c.p.batch.reader.IBMMQItemReader] - No hay más mensajes en ninguna cola
+2026-01-21 17:18:11 [main] INFO  [c.p.b.listener.BatchErrorListener] - --- Step Completado: processXmlStep ---
+2026-01-21 17:18:11 [main] INFO  [c.p.b.listener.BatchErrorListener] - Items leídos: 0, Procesados: 0, Escritos: 0
+2026-01-21 17:18:11 [main] INFO  [o.s.batch.core.step.AbstractStep] - Step: [processXmlStep] executed in 10s233ms
+2026-01-21 17:18:11 [main] INFO  [c.p.b.listener.BatchErrorListener] - === FINALIZANDO BATCH POLICIA-XML ===
+2026-01-21 17:18:11 [main] INFO  [c.p.b.listener.BatchErrorListener] - Status: COMPLETED
+2026-01-21 17:18:11 [main] INFO  [c.p.b.listener.BatchErrorListener] - Tiempo de ejecución: 10251ms
+2026-01-21 17:18:11 [main] INFO  [c.p.b.listener.BatchErrorListener] - JOB COMPLETADO EXITOSAMENTE
+2026-01-21 17:18:11 [main] INFO  [o.s.b.c.l.support.SimpleJobLauncher] - Job: [SimpleJob: [name=policiaXmlProcessingJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 10s251ms
+2026-01-21 17:18:11 [main] INFO  [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 17:18:11 [main] INFO  [o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2026-01-21 17:18:11 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2026-01-21 17:18:11 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2026-01-21 17:22:32 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - Starting PoliciaXmlBatchApplication v1.0.0 using Java 17.0.12 on 138519856ASC-WS with PID 76776 (D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch\target\policia-batch-1.0.0.jar started by alberto.sanmartin in D:\alberto.sanmartin\Mis documentos\proyectos-batch\policia-batch)
+2026-01-21 17:22:32 [main] DEBUG [c.p.batch.PoliciaXmlBatchApplication] - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-01-21 17:22:32 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - No active profile set, falling back to 1 default profile: "default"
+2026-01-21 17:22:33 [main] INFO  [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21 17:22:33 [main] INFO  [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2026-01-21 17:22:33 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2026-01-21 17:22:33 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2026-01-21 17:22:33 [main] INFO  [o.h.jpa.internal.util.LogHelper] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21 17:22:33 [main] INFO  [org.hibernate.Version] - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-01-21 17:22:33 [main] INFO  [o.h.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-01-21 17:22:33 [main] INFO  [org.hibernate.dialect.Dialect] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2026-01-21 17:22:33 [main] INFO  [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-01-21 17:22:33 [main] INFO  [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 17:22:34 [main] WARN  [o.s.b.a.batch.JpaBatchConfigurer] - JPA does not support custom isolation levels, so locks may not be taken when launching Jobs. To silence this warning, set 'spring.batch.jdbc.isolation-level-for-create' to 'default'.
+2026-01-21 17:22:34 [main] INFO  [o.s.b.c.r.s.JobRepositoryFactoryBean] - No database type set, using meta data indicating: H2
+2026-01-21 17:22:34 [main] INFO  [o.s.b.c.l.support.SimpleJobLauncher] - No TaskExecutor has been set, defaulting to synchronous executor.
+2026-01-21 17:22:34 [main] INFO  [c.p.batch.PoliciaXmlBatchApplication] - Started PoliciaXmlBatchApplication in 2.321 seconds (JVM running for 2.606)
+2026-01-21 17:22:34 [main] INFO  [o.s.b.a.b.JobLauncherApplicationRunner] - Running default command line with: []
+2026-01-21 17:22:34 [main] INFO  [o.s.b.c.l.support.SimpleJobLauncher] - Job: [SimpleJob: [name=policiaXmlProcessingJob]] launched with the following parameters: [{}]
+2026-01-21 17:22:34 [main] INFO  [c.p.b.listener.BatchErrorListener] - === INICIANDO BATCH POLICIA-XML ===
+2026-01-21 17:22:34 [main] INFO  [c.p.b.listener.BatchErrorListener] - Job ID: 1
+2026-01-21 17:22:34 [main] INFO  [c.p.b.listener.BatchErrorListener] - Parámetros: {}
+2026-01-21 17:22:34 [main] INFO  [o.s.batch.core.job.SimpleStepHandler] - Executing step: [processXmlStep]
+2026-01-21 17:22:34 [main] INFO  [c.p.b.listener.BatchErrorListener] - --- Iniciando Step: processXmlStep ---
+2026-01-21 17:22:34 [main] INFO  [c.p.batch.reader.IBMMQItemReader] - Intentando leer mensaje de cola: NOTIFICA.EOL.RTA
+2026-01-21 17:22:34 [main] DEBUG [o.s.jms.core.JmsTemplate] - Executing callback on JMS Session: {"ConnectionId":"414D51434D51414445534120202020207C9B4A6900867A6B","ObjectId":"com.ibm.msg.client.wmq.internal.WMQSession@4f8b4bd0","Channel":"APP.CH","Port":"3434","ConnectionMode":"WMQ_CM_CLIENT","Host":"mqadesa.sii.cl/10.20.130.183","ResolvedQueueManager":"MQADESA","QueueManager":"MQADESA"}
+2026-01-21 17:22:40 [main] INFO  [c.p.batch.reader.IBMMQItemReader] - Cambiando a cola: NOTIFICA.EOL.MAS
+2026-01-21 17:22:40 [main] DEBUG [o.s.jms.core.JmsTemplate] - Executing callback on JMS Session: {"ConnectionId":"414D51434D51414445534120202020207C9B4A6900867A6B","ObjectId":"com.ibm.msg.client.wmq.internal.WMQSession@4f8b4bd0","Channel":"APP.CH","Port":"3434","ConnectionMode":"WMQ_CM_CLIENT","Host":"mqadesa.sii.cl/10.20.130.183","ResolvedQueueManager":"MQADESA","QueueManager":"MQADESA"}
+2026-01-21 17:22:45 [main] INFO  [c.p.batch.reader.IBMMQItemReader] - No hay más mensajes en ninguna cola
+2026-01-21 17:22:45 [main] INFO  [c.p.b.listener.BatchErrorListener] - --- Step Completado: processXmlStep ---
+2026-01-21 17:22:45 [main] INFO  [c.p.b.listener.BatchErrorListener] - Items leídos: 0, Procesados: 0, Escritos: 0
+2026-01-21 17:22:45 [main] INFO  [o.s.batch.core.step.AbstractStep] - Step: [processXmlStep] executed in 10s219ms
+2026-01-21 17:22:45 [main] INFO  [c.p.b.listener.BatchErrorListener] - === FINALIZANDO BATCH POLICIA-XML ===
+2026-01-21 17:22:45 [main] INFO  [c.p.b.listener.BatchErrorListener] - Status: COMPLETED
+2026-01-21 17:22:45 [main] INFO  [c.p.b.listener.BatchErrorListener] - Tiempo de ejecución: 10244ms
+2026-01-21 17:22:45 [main] INFO  [c.p.b.listener.BatchErrorListener] - JOB COMPLETADO EXITOSAMENTE
+2026-01-21 17:22:45 [main] INFO  [o.s.b.c.l.support.SimpleJobLauncher] - Job: [SimpleJob: [name=policiaXmlProcessingJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 10s244ms
+2026-01-21 17:22:45 [main] INFO  [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 17:22:45 [main] INFO  [o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl] - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2026-01-21 17:22:45 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2026-01-21 17:22:45 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.

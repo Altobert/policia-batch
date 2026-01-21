@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policia-data>
+    <id>POL123456</id>
+    <nombre>Juan Pérez</nombre>
+    <rango>SARGENTO</rango>
+    <unidad>Unidad Central
+    <!-- XML mal formado - falta cerrar tag unidad y policia-data -->

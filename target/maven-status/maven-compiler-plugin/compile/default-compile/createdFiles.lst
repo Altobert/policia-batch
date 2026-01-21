@@ -1,0 +1,13 @@
+com\policia\batch\processor\PoliciaDataProcessor.class
+com\policia\batch\service\XmlValidationService$1.class
+com\policia\batch\config\CustomSkipPolicy.class
+com\policia\batch\exception\InvalidDataException.class
+com\policia\batch\PoliciaXmlBatchApplication.class
+com\policia\batch\config\BatchConfiguration.class
+com\policia\batch\model\PoliciaData.class
+com\policia\batch\exception\MalformedXmlException.class
+com\policia\batch\service\XmlValidationService.class
+com\policia\batch\config\JmsConfiguration.class
+com\policia\batch\listener\BatchErrorListener.class
+com\policia\batch\writer\PoliciaDataWriter.class
+com\policia\batch\reader\IBMMQItemReader.class

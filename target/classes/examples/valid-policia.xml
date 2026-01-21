@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policia-data>
+    <id>POL123456</id>
+    <nombre>Juan Pérez García</nombre>
+    <rango>SARGENTO</rango>
+    <unidad>Unidad Central Metro</unidad>
+    <estado>ACTIVO</estado>
+</policia-data>
